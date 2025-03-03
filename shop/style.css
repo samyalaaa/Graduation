@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pathway+Gothic+One&family=Patrick+Hand&family=Patua+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+
+/* Navbar */
+.navbar {
+    width: 540px;
+    height: 55px;
+    background-color: #D9D9D96B;
+    border-radius: 37px;
+    margin: 10px 0 0 10px;
+}
+.navbar .nav .nav-item .nav-link {
+    gap: 20px;
+}
+.navbar .nav .nav-item a{
+    font-family: "Patua One";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    transition: all .5s;
+    color:#1E7076;
+}
+.navbar .nav .nav-item a:hover{
+    color: red;
+}
+
+/* Search bar */
+.search {
+    max-width: 400px;
+    margin: 20px 0 40px 20px;
+}
+.search-input {
+    width: 100%;
+    padding: 8px 8px 8px 40px;
+    font-size: 16px;
+    border: 1.5px solid #1E7076;
+    border-radius: 37px;
+}
+.search-input::placeholder {
+    color:#0000005E ;
+    font-family: "Patua One";
+    font-weight: 400;
+    font-size: 17px;
+}
+.search i{
+    position: absolute;
+    top: 18%;
+    left: 35px;
+    transform: translateY(-50%);
+    color: #0000005E;
+}
+
+/* home */
+.home{
+    height:120vh;
+    width: 100%;
+    background-image: url("../images/glasssess.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+.home .text-home p{
+    font-family: "Patua One";
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    color: #3B696D;
+    position: absolute;
+    top: 65px;
+    right: 200px;
+    z-index: 2;
+}
+.home .text-home a button{
+    width: 210px;
+    height: 60px;
+    background-color: #1E7076;
+    color: #FAD660;
+    font-family: "Patua One";
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 21px;
+    border: none;
+    border-radius: 37px;
+    position: absolute;
+    top: 580px;
+    left: 200px;
+    z-index: 2;
+    transition: all 1s;
+}
+.home .text-home a button:hover{
+    background-color: #FAD660;
+    color: #1E7076;
+    transform: scale(1.1);
+}
+.home .text-home .b{
+    top: 440px;
+    left: 60px;
+    font-size: 28px;
+    line-height: 23px;
+}
+.home .text-home .btns {
+    position: absolute;
+    top: 370px;
+    left: 50px;
+    z-index: 2;
+}
+.home .text-home .btns button{
+    font-family: "Patrick Hand";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 21px;
+    color: #3B696D;
+    margin:  5px 0 5px 35px;
+    width: auto;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #00000033;
+    border-radius: 50px;
+    background-color: #f8f4f4a8;
+    box-shadow: 0 10px 10px 0 #00000048;
+    cursor: text;
+}
+
+/* horizontal slider */
+.gallery{
+    width: 800px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallery div{
+    width: 135%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    grid-gap: 40px;
+    padding: 20px;
+    flex: none;
+}
+.gallery img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+/* .gallery::-webkit-scrollbar{
+    display: none;
+} */
+.wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5% auto;
+}
+#left, #right{
+    height: 50px;
+    width: 50px;
+    color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    margin: 0 70px;
+}
+.gallery span p{
+    font-family: "Pathway Gothic One";
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* vertical slider */
+.images{
+    text-align: center;
+}
+.images .tite{
+    margin: 100px 0;
+    text-align-last: left;
+}
+.images .tite p{
+    font-family: "Patua One";
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    color: #3B696D;
+}
+.images, .images2 {
+    display: flex;
+    flex-direction: column;
+}
+.images .image ,
+.images .image2  {
+    margin: 30px -50px ;
+}
+.images .image img{
+    width: 85%;
+    object-fit: cover;
+    transition: all 1s;
+}
+.images .image2 img{
+    width: 82.5%;
+    object-fit: cover;
+    transition: all 1s;
+}
+.images .image2 img:hover,
+.images .image img:hover{
+    transform: scale(1.1);
+}
+/*  */
+@media screen and (max-width: 426px) {
+    .navbar {
+        width: 100%;
+    }
+    .search {
+        width: 100%;
+        margin: 20px ;
+    }
+    .search-input {
+        width: 100%;
+    }
+    .search i{
+        top: 17%;
+        left: 35px;
+    }
+    .home .text-home p{
+        font-size: 28px;
+        line-height: 33px;
+        top: 0;
+        right: 250px;
+    }
+    .home .text-home a button{
+        top: 600px;
+        left: 10px;
+    }
+    .home .text-home .b{
+        top: 500px;
+        left: 10px;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .home .text-home .btns {
+        position: absolute;
+        top: 370px;
+        left: -20px;
+        z-index: 2;
+    }
+    .images{
+        text-align: left;
+    }
+    .images .image img{
+        width: 70%;
+    }
+    .images .image2 img{
+        width: 70%;
+    }
+}
