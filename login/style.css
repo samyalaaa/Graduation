@@ -205,9 +205,9 @@ body {
 }
 
 /* Media Query */
-@media screen and (max-width: 426px){
+@media screen and (max-width: 769px){
     .login-container{
-        width: 88%;
+        width: auto;
         padding: 40px 30px;
     }
     .images{

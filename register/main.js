@@ -3,7 +3,6 @@ userName = document.querySelector("#userName");
 emial = document.querySelector("#email");
 Password = document.querySelector("#Password");
 confirmPassword = document.querySelector("#Confirm");
-error = document.getElementById("error");
 
 // array to store all users
 allUsers = [];
@@ -14,12 +13,18 @@ function Register(){
         User_name: userName.value,
         User_email: emial.value,
         User_Password: Password.value,
-        User_Confirm: confirmPassword.value,
+        User_Confirm: confirmPassword.value
     }
-    allUsers.push(obj);
-    localStorage.setItem("Users", JSON.stringify(allUsers));
+
+    if(userName.value === "" && emial.value === "" && Password.value === "" && confirmPassword.value === ""){
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Please fill in all fields",
+        });
+        }
     
-    if(userName.value === "" || userName.value == null){
+    else if(userName.value === "" || userName.value == null){
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -60,7 +65,8 @@ function Register(){
     }
 
         else {
-            alert("User Registered Successfully");
+            allUsers.push(obj);
+            localStorage.setItem("Users", JSON.stringify(allUsers));
             clearUsers();
             location.href = "../login/login.html";
         }
