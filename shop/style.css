@@ -20,6 +20,11 @@
     transition: all .5s;
     color:#1E7076;
 }
+@media screen and (max-width:427px){
+    .navbar .nav .nav-item a  {
+        font-size: 15px;
+    }
+}
 .navbar .nav .nav-item a:hover{
     color: red;
 }
@@ -30,6 +35,8 @@
     margin: 20px 0 40px 20px;
 }
 .search-input {
+    position: relative;
+    z-index: 1;
     width: 100%;
     padding: 8px 8px 8px 40px;
     font-size: 16px;
@@ -46,8 +53,15 @@
     position: absolute;
     top: 18%;
     left: 35px;
+    z-index: 2;
     transform: translateY(-50%);
     color: #0000005E;
+}
+@media screen and (max-width:769px) {
+    .search i{
+
+        transform: translateY(190%);
+    }
 }
 
 /* home */
@@ -74,7 +88,12 @@
     right: 200px;
     z-index: 2;
 }
-.home .text-home a button{
+@media screen and (min-width: 768px){
+    .home .text-home p{
+        right: 40px ;
+    }
+}
+a button{
     width: 210px;
     height: 60px;
     background-color: #1E7076;
@@ -91,7 +110,13 @@
     z-index: 2;
     transition: all 1s;
 }
-.home .text-home a button:hover{
+@media screen and (min-width: 768px){
+    a button{
+        top: 290px ;
+        left: 100px;
+    }
+}
+a button:hover{
     background-color: #FAD660;
     color: #1E7076;
     transform: scale(1.1);

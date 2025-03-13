@@ -61,3 +61,7 @@ document.addEventListener("keydown", function(e){
         Login();
     }
 });
+
+function forgot(){
+    window.location.href = "../forget pass/forget.html";
+}

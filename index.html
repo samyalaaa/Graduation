@@ -11,8 +11,8 @@
     <!-- Navbar -->
     <nav class="nav">
         <div class="auth-container">
-            <a href="login/login.html" class="login-button">Log in</a>
-            <a href="register/register.html" class="register-button">Register</a>
+            <a href="#" class="login-button" onclick="login()">Log in</a>
+            <a href="#" class="register-button" onclick="register()">Register</a>
         </div>
     </nav>
 
@@ -30,6 +30,15 @@
             <div class="triangle"><img src="images/Polygon 1.png" alt=""></div>
     </div>
 
-
+    <!-- scriptt -->
+    <script>
+        function login() {
+            window.location.href = "login/login.html";
+        }
+        
+        function register() {
+            window.location.href = "register/register.html";
+        }
+    </script>
 </body>
 </html>
