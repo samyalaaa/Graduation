@@ -1,0 +1,222 @@
+@import url(../bootstrab/bootstrap.min.css);
+@import url(../webfonts/fonts.css);
+@import url(../icons/icons.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+.container{
+    width: 100%;
+}
+.header h3{
+    font-family: "Pathway Gothic One";
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 15px;
+    color: #1E7076;
+    margin: 50px 0 0 30px;
+}
+.header .navbar-nav{
+    margin: 20px auto 0 auto;
+    gap: 40px;
+}
+.navbar-nav a{
+    font-family: "Petrona";
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #1E7076;
+}
+.product-image {
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    z-index: 2;
+}
+.shop-now {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    padding: 20px;
+    background-color: transparent;
+    color: #000000;
+    border: 1px solid #000000;
+    font-family: "Pathway Gothic One";
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 25px;
+    text-transform: uppercase;
+    z-index: 1;
+    transition: all .5s;
+}
+.shop-now:hover {
+    background-color: #000000;
+    color: #fff;
+}
+.cards{
+    margin: 50px 0;
+}
+.cards img{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.cards .text p{
+    font-family: "Poller One";
+    width: 80px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0%;
+    color: #FFF;
+    position: absolute;
+    z-index: 2;
+    text-transform: uppercase;
+    bottom: -103%;
+}
+.cards .icon{
+    position: absolute;
+    z-index: 2;
+    color: #FFF;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all .5s;
+    bottom: -100%;
+}
+.cards .icon:hover{
+    color: #000000;
+}
+.cards .g{
+    left: 10%;
+}
+.cards .m{
+    left: 43%;
+}
+.cards .s{
+    left: 70%;
+}
+.cards .text .girl{
+    left: 23%;
+}
+.cards .text .men{
+    left: 53%;
+}
+.cards .text .sale{
+    left: 80%;
+}
+.cart{
+    margin: 0 0 80px 0;
+}
+.cart h3,span{
+    font-family: "Ramabhadra";
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 50px 0;
+    color: #1E7076;
+    text-transform: uppercase;
+}
+.cart .image img{
+    height: 550px;
+    object-fit: cover;
+}
+.cart span{
+    font-family: "Rajdhani";
+    font-size: 30px;
+}
+.cart .price {
+    font-family: "Ramabhadra";
+    font-size: 30px;
+    color: #1E7076;
+    font-weight: 400;
+    margin: 20px 0;
+    text-align: center;
+}
+.cart .add-to-cart {
+    padding: 12px 20px;
+    background-color: transparent;
+    color: #1E7076;
+    border: 1px solid #1E7076;
+    transition: all 0.3s ;
+    text-transform: uppercase;
+    font-family: "Rambla";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.cart .add-to-cart:hover {
+    background-color: #1E7076;
+    color: white;
+}
+.cart .favorite {
+    padding: 3.5px 5px;
+    border: 1px solid #1E7076;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 88px;
+}
+
+.cart .favorite:hover {
+    color: red;
+}
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 120px auto 40px auto;
+}
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+.footer-heading {
+    color: #1E7076;
+    font-family: "Rhodium Libre";
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.footer-links li {
+    margin-bottom: 15px;
+    color: #1E7076;
+    font-family: "Rhodium Libre";
+    font-weight: 400;
+    font-size: 15px;
+}
+.footer-links a{
+    color: #1E7076;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.footer-links a:hover {
+    color: red;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+    }
+    
+    .footer-column {
+        width: 100%;
+        padding-right: 0;
+    }
+}
