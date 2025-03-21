@@ -64,13 +64,9 @@
 
 /* home */
 .home{
-    height:120vh;
-    width: 100%;
-    background-image: url("../images/glasssess.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
     margin-bottom: 50px;
     position: relative;
     z-index: 1;

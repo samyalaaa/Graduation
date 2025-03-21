@@ -55,13 +55,7 @@ function clearUsers(){
     Password.value = "";
 }
 
-// Registering the user when the enter key is pressed
-document.addEventListener("keydown", function(e){
-    if(e.keyCode == 13){
-        Login();
-    }
-});
-
+// forgot password
 function forgot(){
     window.location.href = "../forget pass/forget.html";
 }

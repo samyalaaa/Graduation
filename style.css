@@ -1,23 +1,9 @@
 @import url("bootstrab/bootstrap.min.css");
 @import url("bootstrab/bootstrap.bundle.min.js");
 @import url("webfonts/fonts.css");
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Patua One";
-}
-img{
-    width: 100%;
-}
-.container{
-    width: 90%;
-    margin: auto;
-}
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
+@import url(../basic/style.css);
+
+
 /* Navbar */
 .nav .auth-container {
     display: flex;
