@@ -1,7 +1,7 @@
-@import url("bootstrab/bootstrap.min.css");
-@import url("bootstrab/bootstrap.bundle.min.js");
-@import url("webfonts/fonts.css");
-@import url(../basic/style.css);
+@import url("CssFolders/bootstrab/bootstrap.min.css");
+@import url("CssFolders/bootstrab/bootstrap.bundle.min.js");
+@import url("CssFolders/webfonts/fonts.css");
+@import url("CssFolders/basic/style.css");
 
 
 /* Navbar */
