@@ -1,61 +1,73 @@
-// declaring variables
-emial = document.querySelector("#email");
-Password = document.querySelector("#password");
+// Declaring variables with proper keywords
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
 
 // Array to store users
-allUsers = JSON.parse(localStorage.getItem("Users")) || [];
+const allUsers = JSON.parse(localStorage.getItem("Users")) || [];
 
 // Login the user
-function Login(){
-    var obj = {
-        User_email: emial.value,
-        User_Password: Password.value,
-    }
-    for(var i = 0; i < allUsers.length; i++){
-        if(obj.User_email == allUsers[i].User_email && obj.User_Password == allUsers[i].User_Password){
-            clearUsers();
-            location.href = "../shop/shop.html";
-            localStorage.setItem("Active User",
-                JSON.stringify({
-                    User_email: allUsers[i].User_email,
-                    User_Password: allUsers[i].User_Password
-                })
-            );
-            break;
-        }else if(obj.User_email === "" || obj.User_email == null){
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Email is required",
-            });
-            break;
-        }else if(obj.User_Password === "" || obj.User_Password == null){
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Password is required",
-            });
-            break;
-        }
-        else{
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Invalid Email or Password",
-            });
-            break;
-        }
-    }
+function login() {
+  // Validate inputs before processing
+  if (!email.value || email.value === "") {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Email is required",
+    });
+    return;
+  }
+  
+  if (!password.value || password.value === "") {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Password is required",
+    });
+    return;
+  }
 
+  const userCredentials = {
+    User_email: email.value,
+    User_Password: password.value,
+  };
+
+  // Check if user exists
+  const foundUser = allUsers.find(
+    user => 
+      user.User_email === userCredentials.User_email && 
+      user.User_Password === userCredentials.User_Password
+  );
+
+  if (foundUser) {
+    // Store active user in localStorage
+    localStorage.setItem("Active User", JSON.stringify({
+      User_email: foundUser.User_email,
+      User_Password: foundUser.User_Password
+    }));
+    
+    // Clear form and redirect
+    clearUsers();
+    location.href = "../shop/shop.html";
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Invalid Email or Password",
+    });
+  }
 }
 
 // Clear the input fields
-function clearUsers(){
-    emial.value = ""; 
-    Password.value = "";
+function clearUsers() {
+  email.value = "";
+  password.value = "";
 }
 
-// forgot password
-function forgot(){
-    window.location.href = "../forget pass/forget.html";
+// Forgot password
+function forgot() {
+  window.location.href = "../forget pass/forget.html";
 }
+
+// Example of adding event listeners (add this to your code)
+document.getElementById("loginButton")?.addEventListener("click", login);
+document.getElementById("forgotPassword")?.addEventListener("click", forgot);
