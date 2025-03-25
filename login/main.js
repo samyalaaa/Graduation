@@ -47,7 +47,15 @@ function login() {
     
     // Clear form and redirect
     clearUsers();
-    location.href = "../shop/shop.html";
+    Swal.fire({
+      icon: "success",
+      title: "Success!",
+      text: "Login successful",
+      timer: 2000,
+      showConfirmButton: false
+    }).then(() => {
+      location.href = "../shop/shop.html";
+    });
   } else {
     Swal.fire({
       icon: "error",
@@ -63,11 +71,7 @@ function clearUsers() {
   password.value = "";
 }
 
-// Forgot password
-function forgot() {
-  window.location.href = "../forget pass/forget.html";
+// don't have an account
+function Register() {
+  window.location.href = "../register/register.html";
 }
-
-// Example of adding event listeners (add this to your code)
-document.getElementById("loginButton")?.addEventListener("click", login);
-document.getElementById("forgotPassword")?.addEventListener("click", forgot);

@@ -229,64 +229,64 @@ a button:hover{
     margin: 30px -50px ;
 }
 .images .image img{
-    width: 85%;
+    width: 80%;
     object-fit: cover;
     transition: all 1s;
 }
 .images .image2 img{
-    width: 82.5%;
+    width: 77%;
     object-fit: cover;
     transition: all 1s;
 }
 .images .image2 img:hover,
 .images .image img:hover{
-    transform: scale(1.1);
+    transform: translateY(-20px);
 }
 /*  */
 @media screen and (max-width: 426px) {
-    .navbar {
-        width: 100%;
-    }
-    .search {
-        width: 100%;
-        margin: 20px ;
-    }
-    .search-input {
-        width: 100%;
-    }
-    .search i{
-        top: 17%;
-        left: 35px;
-    }
-    .home .text-home p{
-        font-size: 28px;
-        line-height: 33px;
-        top: 0;
-        right: 250px;
-    }
-    .home .text-home a button{
-        top: 600px;
-        left: 10px;
-    }
-    .home .text-home .b{
-        top: 500px;
-        left: 10px;
-        font-size: 20px;
-        line-height: 23px;
-    }
-    .home .text-home .btns {
-        position: absolute;
-        top: 370px;
-        left: -20px;
-        z-index: 2;
-    }
-    .images{
-        text-align: left;
-    }
-    .images .image img{
-        width: 70%;
-    }
-    .images .image2 img{
-        width: 70%;
-    }
+.navbar {
+    width: 100%;
+}
+.search {
+    width: 100%;
+    margin: 20px ;
+}
+.search-input {
+    width: 100%;
+}
+.search i{
+    top: 17%;
+    left: 35px;
+}
+.home .text-home p{
+    font-size: 28px;
+    line-height: 33px;
+    top: 0;
+    right: 250px;
+}
+.home .text-home a button{
+    top: 600px;
+    left: 10px;
+}
+.home .text-home .b{
+    top: 500px;
+    left: 10px;
+    font-size: 20px;
+    line-height: 23px;
+}
+.home .text-home .btns {
+    position: absolute;
+    top: 370px;
+    left: -20px;
+    z-index: 2;
+}
+.images{
+    text-align: left;
+}
+.images .image img{
+    width: 70%;
+}
+.images .image2 img{
+    width: 70%;
+}
 }
